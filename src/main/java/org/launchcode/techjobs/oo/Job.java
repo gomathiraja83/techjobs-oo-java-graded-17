@@ -16,20 +16,19 @@ public class Job {
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
-     public Job(){
-         id = nextId;
-         nextId++;
-     }
-     public Job(String name, Employer employer, Location location, PositionType positiontype, CoreCompetency coreCompetency)
-     {
-         this();
-         this.name = name;
-         this.employer = employer;
-         this.location = location;
-         this.positionType = positiontype;
-         this.coreCompetency =coreCompetency;
-     }
+    public Job() {
+        id = nextId;
+        nextId++;
+    }
 
+    public Job(String name, Employer employer, Location location, PositionType positiontype, CoreCompetency coreCompetency) {
+        this();
+        this.name = name;
+        this.employer = employer;
+        this.location = location;
+        this.positionType = positiontype;
+        this.coreCompetency = coreCompetency;
+    }
 
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
@@ -95,4 +94,44 @@ public class Job {
     public int getId() {
         return id;
     }
-}
+
+
+    @Override
+    public String toString() {
+        String newLine = System.lineSeparator();
+        //checks Fields for null and emptystring
+        if (name == null || (name != null && name.isEmpty())) {
+               name = "Data not available";
+        }
+        if (employer.toString() == null || (employer.toString() !=null && employer.toString().isEmpty()) )
+        {
+            employer.setValue("Data not available");
+        }
+        if (location.toString() == null || (location.toString() !=null && location.toString().isEmpty()) )
+        {
+            location.setValue("Data not available");
+        }
+        if (positionType.toString() == null || (positionType.toString() !=null && positionType.toString().isEmpty()) )
+        {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.toString() == null || (coreCompetency.toString() !=null && coreCompetency.toString().isEmpty()) )
+        {
+            coreCompetency.setValue("Data not available");
+        }
+
+        return newLine +
+                    "Id: " + id + newLine +
+                    "Name: " + name + newLine +
+                    "Employer: " + employer + newLine +
+                    "Location: " + location + newLine +
+                    "Position Type: " + positionType + newLine +
+                    "Core Competency: " + coreCompetency + newLine;
+
+        }
+    }
+
+
+
+
+
