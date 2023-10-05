@@ -2,9 +2,12 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Location {
-
-    private int id;
+public class Location extends JobField {
+    public Location(String value) {
+        super(value);
+    }
+}
+    /*private int id;
     private static int nextId = 1;
     private String value;
 
@@ -12,10 +15,7 @@ public class Location {
         id = nextId;
         nextId++;
     }
-    public Location(String value) {
-        this();
-        this.value = value;
-    }
+
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
 
@@ -52,6 +52,6 @@ public class Location {
 
     public void setValue(String value) {
         this.value = value;
-    }
+    }*/
 
-}
+
