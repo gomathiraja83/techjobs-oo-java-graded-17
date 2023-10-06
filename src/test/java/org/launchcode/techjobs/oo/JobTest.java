@@ -54,7 +54,7 @@ public class JobTest {
        //
         Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String expected = newLine +
-                "Id: "+job5.getId() + newLine +
+                "ID: "+job5.getId() + newLine +
                 "Name: Product tester"+newLine +
                 "Employer: ACME" + newLine +
                 "Location: Desert" + newLine +
@@ -71,7 +71,7 @@ public class JobTest {
         String newLine = System.lineSeparator();
         Job job5 = new Job(null, new Employer("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String expected = newLine +
-                "Id: "+job5.getId() + newLine +
+                "ID: "+job5.getId() + newLine +
                 "Name: Data not available"+newLine +
                 "Employer: ACME" + newLine +
                 "Location: Data not available" + newLine +

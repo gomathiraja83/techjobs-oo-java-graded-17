@@ -15,6 +15,7 @@ abstract class JobField {
 
     // constructor for value
     public JobField(String value) {
+        this();
         this.value = value;
     }
     // getter setter for id and value
@@ -37,6 +38,18 @@ abstract class JobField {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        JobField jobField = (JobField) o;
+        return id == jobField.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+    /*@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
         if (!(o instanceof JobField jobField)) return false;
         return getId() == jobField.getId();
     }
@@ -44,5 +57,5 @@ abstract class JobField {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
-    }
+    }*/
 }
