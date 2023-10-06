@@ -103,19 +103,19 @@ public class Job {
         if (name == null || (name != null && name.isEmpty())) {
                name = "Data not available";
         }
-        if (employer.toString() == null || (employer.toString() !=null && employer.toString().isEmpty()) )
+        if (employer.getValue() == null || (employer.getValue() !=null && employer.getValue().isEmpty()) )
         {
             employer.setValue("Data not available");
         }
-        if (location.toString() == null || (location.toString() !=null && location.toString().isEmpty()) )
+        if (location.getValue() == null || (location.getValue() !=null && location.getValue().isEmpty()) )
         {
             location.setValue("Data not available");
         }
-        if (positionType.toString() == null || (positionType.toString() !=null && positionType.toString().isEmpty()) )
+        if (positionType.getValue() == null || (positionType.getValue() !=null && positionType.getValue().isEmpty()) )
         {
             positionType.setValue("Data not available");
         }
-        if (coreCompetency.toString() == null || (coreCompetency.toString() !=null && coreCompetency.toString().isEmpty()) )
+        if (coreCompetency.getValue() == null || (coreCompetency.getValue() !=null && coreCompetency.getValue().isEmpty()) )
         {
             coreCompetency.setValue("Data not available");
         }
