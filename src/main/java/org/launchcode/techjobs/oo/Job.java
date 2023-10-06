@@ -121,7 +121,7 @@ public class Job {
         }
 
         return newLine +
-                    "Id: " + id + newLine +
+                    "ID: " + id + newLine +
                     "Name: " + name + newLine +
                     "Employer: " + employer + newLine +
                     "Location: " + location + newLine +
